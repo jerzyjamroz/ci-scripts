@@ -953,7 +953,7 @@ def prepare_rtems_cross(epics_arch, version):
         ["configure", "os", "CONFIG_SITE.Common.RTEMS"],
         {
             "RTEMS_VERSION": version,
-            "RTEMS_BASE": "/opt/rtems/" + version,
+            "RTEMS_BASE": ci['cachedir'] + "/opt/rtems/" + version,
         },
     )
 
